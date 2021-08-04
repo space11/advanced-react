@@ -6,5 +6,35 @@
   "repository": "https://github.com/space11/advanced-react",
   "author": "Borys Olejniczak",
   "license": "MIT",
-  "private": null
+  "private": null,
+  "scripts": {
+    "dev": "pm2 start lib/server.js --watch --interpreter babel-node"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pm2": "^5.1.0"
+  }
 }
