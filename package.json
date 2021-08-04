@@ -6,15 +6,16 @@
   "repository": "https://github.com/space11/advanced-react",
   "author": "Borys Olejniczak",
   "license": "MIT",
-  "private": null,
+  "private": false,
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node"
+    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "webpack": "webpack -w  --mode=development"
   },
   "babel": {
     "presets": [
-      "react",
+      "@babel/react",
       [
-        "env",
+        "@babel/env",
         {
           "targets": {
             "node": "current"
@@ -26,15 +27,22 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-react": "^7.24.0",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-stage-2": "^7.8.3",
+    "babel-loader": "^8.2.2",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "pm2": "^5.1.0"
+    "pm2": "^5.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.48.0"
   }
 }
