@@ -1,0 +1,10 @@
+{
+  "name": "advanced-react",
+  "version": "1.0.0",
+  "description": "Full-Stack JavaScript application",
+  "main": "lib/server.js",
+  "repository": "https://github.com/space11/advanced-react",
+  "author": "Borys Olejniczak",
+  "license": "MIT",
+  "private": null
+}
