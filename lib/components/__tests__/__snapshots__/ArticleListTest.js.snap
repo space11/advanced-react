@@ -19,7 +19,9 @@ exports[`ArticleList renders correctly 1`] = `
           "fontWeight": "bold",
         }
       }
-    />
+    >
+      
+    </div>
     <div
       style={
         Object {
@@ -48,7 +50,9 @@ exports[`ArticleList renders correctly 1`] = `
           "paddingLeft": 20,
         }
       }
-    />
+    >
+      
+    </div>
   </div>
   <div
     style={
@@ -67,7 +71,9 @@ exports[`ArticleList renders correctly 1`] = `
           "fontWeight": "bold",
         }
       }
-    />
+    >
+      
+    </div>
     <div
       style={
         Object {
@@ -96,7 +102,9 @@ exports[`ArticleList renders correctly 1`] = `
           "paddingLeft": 20,
         }
       }
-    />
+    >
+      
+    </div>
   </div>
 </div>
 `;
