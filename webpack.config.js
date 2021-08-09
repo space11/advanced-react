@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   resolve: {
@@ -9,33 +8,19 @@ module.exports = {
     ]
   },
   entry: {
-    vendor: [
-      'react',
-      'react-dom',
-      'prop-types',
-      'axios',
-      'lodash.debounce',
-      'lodash.pickby'
-    ],
-    app: ['./lib/renderers/dom.js']
+    vendor: ['react', 'react-dom', 'axios'],
+    app: [path.resolve('./lib/renderers/dom.js')]
   },
   optimization: {
-    runtimeChunk: 'single',
     splitChunks: {
-      chunks: 'all',
-      maxInitialRequests: Infinity,
-      minSize: 0,
       cacheGroups: {
+        // match the entry point and spit out the file named here
         vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name(module) {
-            // get the name. E.g. node_modules/packageName/not/this/part.js
-            // or node_modules/packageName
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-
-            // npm package names are URL-safe, but some servers don't like @ symbols
-            return `npm.${packageName.replace('@', '')}`;
-          },
+          chunks: 'initial',
+          name: 'vendor',
+          test: 'vendor',
+          filename: 'vendor.js',
+          enforce: true,
         },
       },
     },
