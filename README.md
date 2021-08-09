@@ -38,3 +38,9 @@ yarn test
 ```
 yarn pm2 logs
 ```
+
+## TODO
+* React production build
+* Node production build
+* Include bundle hash in bundle name
+ 
